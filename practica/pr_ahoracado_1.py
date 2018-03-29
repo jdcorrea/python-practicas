@@ -16,7 +16,9 @@ def ahorcado(imagen, letrasU, TurnosF, listPal, opcOk):
     # Si se debe ejecutar lógica del juego
     if opcOk is True:
         print('Para finalizar el programa seleccione escriba: {}'.format('FIN'))
-        ingreso = input('Escoje una letra: ').lower()
+        ingreso = ''
+        while ingreso == '':
+            ingreso = input('Escoje una letra: ').lower()
         print('-' * 50)
 
         # en caso de que el usuario haya seleccionado la salida del juego
@@ -150,6 +152,7 @@ imagenRes = {
 if __name__ == '__main__':
     letrasUsadas = ''
     TurnosFallidos = 0
+    palabra = ''
     ahorcadoini = [[' ', '+', '-', '-', '+', ' ', ' ', ' ', ' '],
                    [' ', '|', ' ', ' ', '|', ' ', ' ', ' ', ' '],
                    [' ', ' ', ' ', ' ', '|', ' ', ' ', ' ', ' '],
@@ -159,7 +162,9 @@ if __name__ == '__main__':
                    ['-', '-', '-', '-', '-', '-', '-', '-', '-'],
                    ['-', '-', '-', '-', '-', '-', '-', '-', '-']]
 
-    palabra = getpass.getpass("Ingrese la palabra a ser adivinida: ")
+    while palabra == '':
+        palabra = getpass.getpass("Ingrese la palabra a ser adivinida: ")
+
     palabra = palabra.lower()
 
     listPalabra = ['_'] * len(palabra)
