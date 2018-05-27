@@ -1,0 +1,31 @@
+h1{
+    font-family: 'Economica', sans-serif;
+    text-align: center;
+}
+
+#tabla{
+    width: 700px;
+    height: 300px;
+    border-spacing: 10px;
+    margin: auto;
+}
+
+#puno{
+    background-color: #604422;
+}
+
+#pdos{
+    background-color: #EFC69B;
+}
+
+#ptres{
+    background-color: #F1F2EB;
+}
+
+#pcuatro{
+    background-color: #A9B822;
+}
+
+#pcinco{
+    background-color: #893168;
+}
